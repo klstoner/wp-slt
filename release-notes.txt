@@ -1,0 +1,17 @@
+RELEASE NOTES
+
+Ver 1.0
+5 Jan 2021
+- Released first version on github with all pieces working, including readme
+- Users need to password protect the /updates/ directory for security
+- Made minor update to index page to be more publicly useful
+
+Ver 1.1
+6 Jan 2021
+- Updated with a new login page (index.php) under /updates/ directory
+- Added pwd.txt under /includes/ directory to hold password
+- Changed name of index.php to update.php - this is the form where you create/update page information 
+- update.php uses the $loginPwd var 
+- update.php also checks to make sure you're coming from the right place before letting you create/edit
+- Changed name of login.php to index.php - start at the very beginning to get into the system
+- Updated createpage.php to reflect new names and also use the $loginPwd variable
