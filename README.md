@@ -2,6 +2,7 @@
 Web Publishing : Simple Little Thing
 CREATED: 2 Jan 2021
 UPDATED: 5 Jan 2021
+UPDATED: 6 Jan 2021
 
 _INTRO_
 
@@ -50,6 +51,7 @@ _HOW TO SET IT UP_
 
 3. Update the following elements
 - The top-level index.php file and change the text there to what you want it to say. This is your index page. You can have it look any way you like. Note that I've included a dynamic pages list that shows all the content. You can comment this out or remove it.
+- /includes/pwd.txt -- this is the password. You can use any characters you like, but it's best to just use random letters and numbers - IMPORTANT! just make sure you don't have spaces
 - /includes/header.php -- this is the header. You'll need to know just a bit of html to update it.
 - /includes/footer.php --  this is the header. You'll need to know just a bit of html to update it.
  
@@ -88,7 +90,10 @@ _HOW TO SET IT UP_
 	index.php // landing page for your site - this can be edited with a text editor - see documentation on the
 	readme.txt // this file
  
-6. Set a password for the /update/directory! IF YOU DO NOT DO THIS, ANYBODY - AND I MEAN ANYBODY - CAN UPDATE YOUR SITE!! WARNING! DANGER! ALERT!!!
+6. (OPTIONAL) Set a password for the /update/directory so you can double-block people from possibly updating your site. 
+WARNING! DANGER! ALERT!!!
+--> IF YOU DO NOT DO THIS, ANYBODY - AND I MEAN ANYBODY - CAN GET TO OUR LOGIN PAGE AND POTENTIALLY HACK OR UPDATE YOUR SITE!!
+WARNING! DANGER! ALERT!!!
  - You can typically do this via settings on the web host. Check with your hosting service about how to do this.
  - NOTE: In the future I may be adding a password feature, but for now, just set it with your host. Or use it locally on a server on your own machine, and then FTP the pages to your internet site.
 
