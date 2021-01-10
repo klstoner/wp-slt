@@ -4,6 +4,8 @@ CREATED: 2 Jan 2021
 UPDATED: 5 Jan 2021
 UPDATED: 6 Jan 2021
 
+Jan 10, 2021 - I am in the process of updating some of the functionality, but due to current events, updates are suspended at this time. Check back in February for further updates.
+
 _INTRO_
 
 This little web publishing / blogging app is a very simple front-end for people who want to write and publish online, without needing to learn all the complexities of today's blogging platforms. 
