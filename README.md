@@ -1,10 +1,9 @@
-# wp-slt
+# wp:slt
 Web Publishing : Simple Little Thing
 CREATED: 2 Jan 2021
 UPDATED: 5 Jan 2021
 UPDATED: 6 Jan 2021
-
-Jan 10, 2021 - I am in the process of updating some of the functionality, but due to current events, updates are suspended at this time. Check back in February for further updates.
+UPDATED: 21 Jan 2021
 
 _INTRO_
 
@@ -51,11 +50,14 @@ _HOW TO SET IT UP_
  - If you don't know how to do that, now's a great time to learn. Google can show you.
  - Make sure you keep a copy of the original .zip file, in case you need to revert any of the pages/code back in the future
 
-3. Update the following elements
-- The top-level index.php file and change the text there to what you want it to say. This is your index page. You can have it look any way you like. Note that I've included a dynamic pages list that shows all the content. You can comment this out or remove it.
-- /includes/pwd.txt -- this is the password. You can use any characters you like, but it's best to just use random letters and numbers - IMPORTANT! just make sure you don't have spaces
+3. Update the following elements in a text editor. When you're done, make sure they save with the .php extension. Some text editors will put .txt on the end. Just take that off and you'll have .php files.
+- The top-level index.php file -- change the text there to what you want it to say. This is your index page. You can have it look any way you like. Note that I've included a dynamic pages list that shows all the content. You can comment this out or remove it.
+- /update/update.php -- you need to change the system password 1234poiu to something else that you want
+	# vvvvv Define the system password below vvvvv
+		$loginSystemPwd = "1234poiu";
 - /includes/header.php -- this is the header. You'll need to know just a bit of html to update it.
 - /includes/footer.php --  this is the header. You'll need to know just a bit of html to update it.
+
  
 4. Place the entire contents of wp:slt onto a web server 
  - If running externally on the internet, you'll need to get the files on the server
@@ -66,31 +68,37 @@ _HOW TO SET IT UP_
 
 5. Check the directory structure. It must look like this:
 
+	index.php // top level index page that's your landing page
+	gnu3-gpl-license.txt // standard license for this
+	readme.txt // this file
+	release-notes.txt // notes about what's changed since the last time I updated this system
+
  	assets/	
+ 		favicon.png // favicon that you can replace with another image of your liking
  		scripts.js // placeholder file for any scripts you want to add later, can be updated with a text editor
  		styles.css // styles for both the editing page(s) and the content on your new site, can be updated with a text editor
  	
 	content/
 		sample-page.php // just a sample page to start with - you should remove it after you're up and running
 				// so it doesn't show up in your table of contents
+				// note: some other pages may be in there, you can do what you like with them
 	
 	includes/
 		footer.php // the site footer, can be updated with a text editor
 		header.php // the site header with navigation links, can be updated with a text editor
 		toc.php // dynamically generated table of contents listing all the pages on your site
+		ids.txt // this specifies the id that will enclose the body content. later, it may be expanded to include multiple ones, but for now, there's just one
 	
 	templates/
 		index.php // starting template for your site, can be updated with a text editor, but 
 			  // there are portions of html that MUST NOT BE CHANGED, or you will break wp:slt
 	
 	update/
+		index.php // login page where you enter the password you specified as your system password
 		createpage.php // page creator and toc updating scripts, also shows confirmation that a page was created
-		index.php // main update screen where you can create a new page or you can choose an existing page to edit
+		update.php // main update screen where you can create a new page or you can choose an existing page to edit
 		
 	
-	gnu3-gpl-license.txt // standard license for this
-	index.php // landing page for your site - this can be edited with a text editor - see documentation on the
-	readme.txt // this file
  
 6. (OPTIONAL) Set a password for the /update/directory so you can double-block people from possibly updating your site. 
 WARNING! DANGER! ALERT!!!
